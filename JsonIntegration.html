@@ -1,0 +1,146 @@
+[9:37 AM] Aravind C
+    what we need to do about his requirement
+​[9:37 AM] Aravind C
+    https://www.jenkins.io/doc/book/pipeline/syntax/
+Pipeline SyntaxJenkins – an open source automation server which enables developers around the world to reliably build, test, and deploy their softwarewww.jenkins.io​[9:37 AM] Ankit Sarkar
+    we need to filter the table
+​[9:38 AM] Ankit Sarkar
+    as per the work order product
+​[9:38 AM] Aravind C
+    okay for that we need to get the servicemax objects....
+​[9:40 AM] Ankit Sarkar
+    yes
+​[9:40 AM] Aravind C
+    we will try ..
+​[9:41 AM] Ankit Sarkar
+    yes
+​[10:00 AM] Aravind C
+    started
+​[10:14 AM] Ankit Sarkar
+    
+
+<!DOCTYPEhtml>
+<html>
+<head>
+<title>Convert JSON Data to HTML Table</title>
+<style>
+#customers {​​​​​​​​
+font-family: Arial, Helvetica, sans-serif;
+border-collapse: collapse;
+width: 100%;
+ }​​​​​​​​
+ 
+#customerstd,
+#customersth {​​​​​​​​
+border: 1pxsolid#ddd;
+padding: 8px;
+ }​​​​​​​​
+ 
+#customerstr:nth-child(even) {​​​​​​​​
+background-color: #f2f2f2;
+ }​​​​​​​​
+ 
+#customerstr:hover {​​​​​​​​
+background-color: #ddd;
+ }​​​​​​​​
+ 
+#customersth {​​​​​​​​
+padding-top: 12px;
+padding-bottom: 12px;
+text-align: left;
+background-color: #4caf50;
+color: white;
+ }​​​​​​​​
+</style>
+</head>
+<bodyonload="CreateTableFromJSON()">
+<h3>Windchill BOM Details</h3>
+<pid="showData"></p>
+</body>
+ 
+<script>
+functionCreateTableFromJSON(){​​​​​​​​
+varobj;
+varoXHR=newXMLHttpRequest();
+ 
+// Initiate request.
+oXHR.onreadystatechange=reportStatus;
+oXHR.open(
+"GET",
+"https://raw.githubusercontent.com/aceankit99/servigistic/master/db.json",
+true
+);// get json file.
+oXHR.send();
+ 
+functionreportStatus(){​​​​​​​​
+if(oXHR.readyState==4){​​​​​​​​
+obj=JSON.parse(this.responseText);
+document.getElementById("showData").innerHTML=obj.Components.length;
+ 
+// EXTRACT VALUE FOR HTML HEADER.
+// ('Book ID', 'Book Name', 'Category' and 'Price')
+varcol=[];
+for(vari=0;i<obj.Components.length;i++){​​​​​​​​
+document.getElementById("showData").innerHTML=i;
+for(varkeyinobj.Components[i]){​​​​​​​​
+document.getElementById("showData").innerHTML=
+obj.Components[i].PartName;
+if(col.indexOf(key)===-1){​​​​​​​​
+col.push(key);
+}​​​​​​​​
+}​​​​​​​​
+}​​​​​​​​
+ 
+// CREATE DYNAMIC TABLE.
+vartable=document.createElement("table");
+table.setAttribute("id","customers");
+// CREATE HTML TABLE HEADER ROW USING THE EXTRACTED HEADERS ABOVE.
+ 
+vartr=table.insertRow(-1);// TABLE ROW.
+ 
+varth=document.createElement("th");// TABLE HEADER.
+th.innerHTML="Part Name";
+tr.appendChild(th);
+ 
+varth1=document.createElement("th");
+th1.innerHTML="Part Number";
+tr.appendChild(th1);
+ 
+varth2=document.createElement("th");
+th2.innerHTML="Quantity";
+tr.appendChild(th2);
+ 
+varth3=document.createElement("th");
+th3.innerHTML="Line Number";
+tr.appendChild(th3);
+ 
+// ADD JSON DATA TO THE TABLE AS ROWS.
+for(vari=0;i<obj.Components.length;i++){​​​​​​​​
+tr=table.insertRow(-1);
+ 
+for(varj=2;j<col.length-6;j++){​​​​​​​​
+vartabCell=tr.insertCell(-1);
+tabCell.innerHTML=obj.Components[i][col[j]];
+}​​​​​​​​
+ 
+for(varj=4;j<col.length-5;j++){​​​​​​​​
+vartabCell=tr.insertCell(-1);
+tabCell.innerHTML=obj.Components[i].PartUse.Quantity;
+}​​​​​​​​
+ 
+for(varj=5;j<col.length-4;j++){​​​​​​​​
+vartabCell=tr.insertCell(-1);
+tabCell.innerHTML=obj.Components[i].PartUse.LineNumber;
+}​​​​​​​​
+}​​​​​​​​
+ 
+// FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
+vardivContainer=document.getElementById("showData");
+divContainer.innerHTML="";
+divContainer.appendChild(table);
+}​​​​​​​​
+}​​​​​​​​
+}​​​​​​​​
+</script>
+</html>
+
