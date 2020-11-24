@@ -1,1 +1,120 @@
-my new update to github
+{
+    "@odata.context": "$metadata#PartStructureItems",
+    "PartId": "OR:wt.part.WTPart:149025",
+    "PartUseId": null,
+    "PartName": "tensioner_copy.asm",
+    "PartNumber": "WCDS000690",
+    "PathId": null,
+    "PVTreeId": "/",
+    "PVParentTreeId": null,
+    "Components": [
+        {
+            "PartId": "OR:wt.part.WTPart:85042",
+            "PartUseId": "OR:wt.part.WTPartUsageLink:149027",
+            "PartName": "tensioner_bracket_copy.prt",
+            "PartNumber": "WCDS000472",
+            "PathId": "670",
+            "PVTreeId": "/670",
+            "PVParentTreeId": "/",
+            "Part": {
+                "@odata.id": "http://bltsp00509.lnties.com/Windchill/servlet/odata/v4/ProdMgmt/Parts('OR:wt.part.WTPart:85042')",
+                "Name": "tensioner_bracket_copy.prt",
+                "Number": "WCDS000472"
+            },
+            "PartUse": {
+                "CreatedOn": "2020-11-09T09:42:02Z",
+                "ID": "OR:wt.part.WTPartUsageLink:149027",
+                "LastModified": "2020-11-09T09:42:02Z",
+                "FindNumber": null,
+                "LineNumber": null,
+                "ObjectType": "Part Usage",
+                "PartOccurrenceAssignedExpression": "",
+                "Quantity": 1.0,
+                "ReferenceDesignatorRange": "",
+                "TraceCode": {
+                    "Value": "0",
+                    "Display": "Untraced"
+                },
+                "Unit": {
+                    "Value": "ea",
+                    "Display": "each"
+                }
+            },
+            "Occurrence": {
+                "CreatedOn": "2020-11-09T09:42:02Z",
+                "ID": "OR:wt.part.PartUsesOccurrence:149029",
+                "LastModified": "2020-11-09T09:42:02Z",
+                "BuildStatus": {
+                    "Value": "built",
+                    "Display": "Completed"
+                },
+                "ComponentID": null,
+                "Location": {
+                    "PointX": 0.0,
+                    "PointY": 0.0,
+                    "PointZ": 0.0,
+                    "PointUnit": "m",
+                    "AngleX": 0.0,
+                    "AngleY": -0.0,
+                    "AngleZ": 0.0,
+                    "AngleUnit": "r"
+                },
+                "ReferenceDesignator": null
+            }
+        },
+        {
+            "PartId": "OR:wt.part.WTPart:149113",
+            "PartUseId": "OR:wt.part.WTPartUsageLink:149028",
+            "PartName": "tensioner_guide.prt",
+            "PartNumber": "WCDS000109",
+            "PathId": "462",
+            "PVTreeId": "/462",
+            "PVParentTreeId": "/",
+            "Part": {
+                "@odata.id": "http://bltsp00509.lnties.com/Windchill/servlet/odata/v4/ProdMgmt/Parts('OR:wt.part.WTPart:149113')",
+                "Name": "tensioner_guide.prt",
+                "Number": "WCDS000109"
+            },
+            "PartUse": {
+                "CreatedOn": "2020-11-09T09:42:02Z",
+                "ID": "OR:wt.part.WTPartUsageLink:149028",
+                "LastModified": "2020-11-09T09:42:02Z",
+                "FindNumber": null,
+                "LineNumber": null,
+                "ObjectType": "Part Usage",
+                "PartOccurrenceAssignedExpression": "",
+                "Quantity": 1.0,
+                "ReferenceDesignatorRange": "",
+                "TraceCode": {
+                    "Value": "0",
+                    "Display": "Untraced"
+                },
+                "Unit": {
+                    "Value": "ea",
+                    "Display": "each"
+                }
+            },
+            "Occurrence": {
+                "CreatedOn": "2020-11-09T09:42:02Z",
+                "ID": "OR:wt.part.PartUsesOccurrence:149030",
+                "LastModified": "2020-11-09T09:42:02Z",
+                "BuildStatus": {
+                    "Value": "built",
+                    "Display": "Completed"
+                },
+                "ComponentID": null,
+                "Location": {
+                    "PointX": 0.0,
+                    "PointY": 0.0,
+                    "PointZ": -0.06,
+                    "PointUnit": "m",
+                    "AngleX": 0.0,
+                    "AngleY": 1.5707963267948966,
+                    "AngleZ": 0.0,
+                    "AngleUnit": "r"
+                },
+                "ReferenceDesignator": null
+            }
+        }
+    ]
+}
